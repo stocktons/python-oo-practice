@@ -17,3 +17,23 @@ class SerialGenerator:
     >>> serial.generate()
     100
     """
+
+    def __init__(self, start=100):
+        """sets the starting number"""
+        self.start = start
+        self.current = start
+
+    def generate(self):
+        """increment the number by 1 each time"""
+        num = self.current
+        self.current += 1
+        return num
+
+    def reset(self):
+        """reset to the original number"""
+        self.current = self.start
+
+
+
+
+    
