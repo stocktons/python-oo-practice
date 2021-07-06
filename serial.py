@@ -19,18 +19,19 @@ class SerialGenerator:
     """
 
     def __init__(self, start=100):
-        """sets the starting number"""
+        """Sets the starting number."""
         self.start = start
-        self.current = start
+        self.current = start # slightly ambiguous - is it the number you just gave out? 
+        # last_num would be more accurate
 
     def generate(self):
-        """increment the number by 1 each time"""
+        """Increment the number by 1 each time."""
         num = self.current
         self.current += 1
         return num
 
     def reset(self):
-        """reset to the original number"""
+        """Reset to the original number."""
         self.current = self.start
 
 
